@@ -109,6 +109,9 @@ Settings relating to boot.efi patching and firmware fixes, ones we need to chang
    * Needed for fixing artefacts and sleep-wake issues, AvoidRuntimeDefrag resolves this already so avoid this quirk unless necessary
 * **ProtectSecureBoot**: NO
    * Fixes secureboot keys on MacPro5,1 and Insyde firmwares
+* **ProtectUefiServices** NO
+   * This quirk ensures the working of DevirtualiseMmio on Z390 boards.
+   Setting a slide value is not required anymore.
 * **ProvideCustomSlide**: YES
    * If there's a conflicting slide value, this option forces macOS to use a pseudo-random value. Needed for those receiving `Only N/256 slide values are usable!` debug message
 * **SetupVirtualMap**: YES
